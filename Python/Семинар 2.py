@@ -1,44 +1,49 @@
-#task1
+'''#task1
 
-a = input("Ваша фамилия: ")
-b = input("Ваше имя: ")
-c = input("Ваше отчество: ")
+fio = input("Введите Ваши ФИО: ")
 
-print(f'Ваши ФИО: {a}, {b}, {c}')
+surname, name, patronymic = fio.split()
 
 
+print(f"Ваша фамилия: {surname}")
+print(f"Ваше имя: {name}")
+print(f"Ваше отчество: {patronymic}")'''
 
-#task2
+
+
+'''#task2
 
 a = "1; 2; 3; 100"
 
-b = 3
-
-print(b)
-
+b = list(a)
+print(b)'''
 
 
-#task3
+
+'''#task3
 
 a = input("Введите номер телефона через дефис: ")
 
-a.replace('-', '')
+b = a.replace("-", "")
 
-print(a)
+print(b)'''
 
 
 
-#task4 
+'''#task4 
+
+import math
 
 l = []
 
-l2 = 1742394
-
+l2 = [log10(x) for x in l]
+print(l2)'''
 
 
 
 #task5
 
-words = ["Speak ","to", "me ", "of", "Florence" ,"And ", "of", "the", "Renaissance"]
+words = ["Speak ","to", "me ", "of", "Florence", "And ", "of", "the", "Renaissance"]
 
-
+words_clean = words.strip()
+print(words_clean)
