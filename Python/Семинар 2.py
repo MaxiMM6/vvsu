@@ -45,5 +45,5 @@ print(l2)'''
 
 words = ["Speak ","to", "me ", "of", "Florence", "And ", "of", "the", "Renaissance"]
 
-words_clean = words.strip()
+words_clean = words.lower()
 print(words_clean)
