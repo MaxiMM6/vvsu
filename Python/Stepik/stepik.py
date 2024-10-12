@@ -1,6 +1,12 @@
-n = 10
-while n > 0:
-    n -= 1
-    if n == 2:
-        continue
-    print(n, end='*')
+n = int(input())
+
+res = []
+count = 0
+
+for i in range(n):
+    l = int(input())
+    count += l
+    res.append(count)
+    l = count
+print(res[1:])
+

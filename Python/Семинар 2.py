@@ -1,4 +1,4 @@
-'''#task1
+#task1
 
 fio = input("Введите Ваши ФИО: ")
 
@@ -7,37 +7,42 @@ surname, name, patronymic = fio.split()
 
 print(f"Ваша фамилия: {surname}")
 print(f"Ваше имя: {name}")
-print(f"Ваше отчество: {patronymic}")'''
+print(f"Ваше отчество: {patronymic}")
 
 
 
-'''#task2
+#task2
 
 a = "1; 2; 3; 100"
 
-b = list(a)
-print(b)'''
+a_list = a.split("; ")
+a_int = []
+a_list = [a_int.append(int(n)) for n in a_list]
+print(a_int)
 
 
+a_float = [float(i) for i in a_int]
+print(a_float)
 
-'''#task3
+
+#task3
 
 a = input("Введите номер телефона через дефис: ")
 
 b = a.replace("-", "")
 
-print(b)'''
+print(b)
 
 
 
-'''#task4 
+#task4 
 
 import math
 
-l = []
+l = [12304, 123024, 54604, 2340]
 
-l2 = [log10(x) for x in l]
-print(l2)'''
+l2 = [math.log10(x) for x in l]
+print(l2)
 
 
 
@@ -45,5 +50,5 @@ print(l2)'''
 
 words = ["Speak ","to", "me ", "of", "Florence", "And ", "of", "the", "Renaissance"]
 
-words_clean = words.lower()
+words_clean = [i.strip().lower() for i in words]
 print(words_clean)
