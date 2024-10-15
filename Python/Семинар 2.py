@@ -10,19 +10,17 @@ print(f"Ваше отчество: {patronymic}")
 
 
 
-#task2
+#task2  
 
 a = "1; 2; 3; 100"
 
 a_list = a.split("; ")
 a_int = []
-a_list = [a_int.append(int(n)) for n in a_list]
 
+a_list = [a_int.append(int(n)) for n in a_list]
 print(a_int)
 
-
 a_float = [float(i) for i in a_int]
-
 print(a_float)
 
 
@@ -40,11 +38,13 @@ print(b)
 
 import math
 
-l = [12304, 123024, 54604, 2340]
+dohod = input("Введите доходы через пробел: ").split()
 
-l2 = [math.log10(x) for x in l]
+l = [int(i) for i in dohod]
 
-print(l2)
+l_log = [math.log10(x) for x in l]
+
+print(l_log)
 
 
 
