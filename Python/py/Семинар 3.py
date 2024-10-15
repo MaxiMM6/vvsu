@@ -1,6 +1,5 @@
 #task1
 
-
 user_input = float(input())
 
 if user_input > 0:
