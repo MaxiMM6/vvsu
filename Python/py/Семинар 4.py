@@ -1,4 +1,4 @@
-'''#task1
+#task1
 
 rept = {"python" : " питон",
         "anaconda" : "анаконда",
@@ -37,7 +37,7 @@ calc = {}
 for i in pairs:
     calc[i] = i[0] * i[1]
 
-print(calc)'''
+print(calc)
 
 
 
