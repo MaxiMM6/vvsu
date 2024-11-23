@@ -2,13 +2,17 @@ import pandas as pd
 import os
 import matplotlib
 
-os.chdir(r'C:\Users\zhlya\Documents\GitHub/vvsu/Python/py/Семинар 9')
+os.chdir(r'C:\Users\tr0jaNNN\Documents\GitHub\vvsu\Python\py\Семинар 9')
+
+            #Загрузка и предварительная обработка
 
 #task1-2
 df = pd.read_csv('Titanic.csv', index_col = 'PassengerId')
 
 #task3
 df = df.dropna()
+
+            #Описание базы данных
 
 #task4
 print(df.info())
@@ -17,10 +21,15 @@ print(df.info())
 print(df.describe())
 
 #task6
-print(df['Age'].plot.hist(color = "red"))
+ax = df['Age'].plot.hist(color = "red")
+ax.set_title('Age')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
 
 #task7
 df['Fare'].describe()
+
+            #Работа со строками и столбцами базы
 
 #task8
 columns_list = list(df.columns)
@@ -38,9 +47,36 @@ print(df[df['Sex'] == 'female'])
 Ymale = df[(df['Survived'] == 1) & (df['Sex'] == 'male') & (df['Age'] < 32)]
 
 #task12
-class_1_2 = df[(df['Class'] == 1) | (df['Class'] == 2)]
+print(df[(df['Class'] == 1) | (df['Class'] == 2)])
 
 #task13
-class_1_2_surv = df[(df['Survived'] == 1) & ((df['Class'] == 1) | (df['Class'] == 2))]
+print(df[(df['Survived'] == 1) & ((df['Class'] == 1) | (df['Class'] == 2))])
 
 #task14
+df['Female'] = (df['Sex'] == 'female').astype(int)
+print(df)
+
+            #Группировка
+
+#task1
+print(df.Embarked.unique())
+
+#task2
+print(df.groupby('Survived').mean(numeric_only = True))
+
+#task3
+age_stats = df.groupby('Sex')['Age'].agg(['mean', 'median'])
+print(age_stats)
+
+            #Выгрузка базы в файл
+
+#task1
+columns_list = list(df.columns)
+lower_list = [x.lower() for x in columns_list]
+df.columns = lower_list
+print(df.columns)
+
+
+#task2
+new_csv = df.to_csv('Titanic-new.csv')
+
