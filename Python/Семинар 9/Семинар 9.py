@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import matplotlib
 
-os.chdir(r'C:\Users\tr0jaNNN\Documents\GitHub\vvsu\Python\py\Семинар 9')
+os.chdir(r'C:\Users\tr0jaNNN\Documents\GitHub\vvsu\Python\Семинар 9')
 
             #Загрузка и предварительная обработка
 
