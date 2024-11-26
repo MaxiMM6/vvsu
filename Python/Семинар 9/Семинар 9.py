@@ -23,8 +23,8 @@ print(df.describe())
 #task6
 ax = df['Age'].plot.hist(color = "red")
 ax.set_title('Age')
-ax.set_xlabel('x')
-ax.set_ylabel('y')
+ax.set_xlabel('Возраст')
+ax.set_ylabel('Кол-во людей')
 
 #task7
 df['Fare'].describe()
