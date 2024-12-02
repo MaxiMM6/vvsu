@@ -76,4 +76,4 @@ print(f'#5 {mean_by_gender(grades, genders)}')
 def calculate_tax(income):
 
 
-income = np.array([])
+    income = np.array([])
