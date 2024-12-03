@@ -43,14 +43,14 @@ weights = np.array([1, 2, 3, 4])
 grades = np.array([1, 5, 3, 2])
 normalize = True
 
-print(f'#4.1 {weighted_sum(weights, grades, normalize)}')
+print(f'#1 {weighted_sum(weights, grades, normalize)}')
 
 #2
 weights = np.array([1, 2, 3, 4])
 grades = np.array([1, 5, 3, 2])
 normalize = False
 
-print(f'#4.2 {weighted_sum(weights, grades, normalize)}')
+print(f'#2 {weighted_sum(weights, grades, normalize)}')
 
 
 
@@ -77,6 +77,12 @@ print(f'#5 {mean_by_gender(grades, genders)}')
 #task6
 
 def calculate_tax(income):
+    pass
 
 
-    income = np.array([])
+
+
+
+
+income = np.array([150] * 12)
+print(f'#6 {calculate_tax(income)}')
