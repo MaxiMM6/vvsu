@@ -31,26 +31,23 @@ print(f'#2 {select_even(arr)}')
 #task4
 
 def weighted_sum(weights, grades, normalize):
-
-    #1
-    grades = np.array([7, 9, 8])
-    weights = np.array([0.3, 0.3, 0.4])
-    normalize = True
+    total_weight = np.sum(weights)
     
-    r = np.dot(grades, weights)
+    if (normalize == True) and (total_weight != 1):
+        weights = weights / total_weight
 
-    if (normalize == True) and (np.sum(r) != 1):
+    return np.dot(weights, grades)
 
-    
-    return np.sum(weights * grades)
-
-
+#1
+weights = np.array([1, 2, 3, 4])
+grades = np.array([1, 5, 3, 2])
+normalize = True
 
 print(f'#4.1 {weighted_sum(weights, grades, normalize)}')
 
 #2
-grades = np.array([7, 9, 8])
-weights = np.array([0.3, 0.3, 0.4])
+weights = np.array([1, 2, 3, 4])
+grades = np.array([1, 5, 3, 2])
 normalize = False
 
 print(f'#4.2 {weighted_sum(weights, grades, normalize)}')
@@ -60,9 +57,15 @@ print(f'#4.2 {weighted_sum(weights, grades, normalize)}')
 #task5
 
 def mean_by_gender(grades, genders):
-    
 
+    male_grades = grades[ genders == 'male' ]
+    female_grades = grades[ genders == 'female' ]
 
+    male_mean = np.mean(male_grades)
+    female_mean = np.mean(female_grades)
+
+    result = {'male' : float(male_mean), 'female' : float(female_mean)}
+    return result
 
 grades = np.array([5, 4, 3, 5, 2])
 genders = np.array(["female", "male", "male", "female", "male"])
