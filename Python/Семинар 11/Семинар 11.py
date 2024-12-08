@@ -22,9 +22,27 @@ print(f'#2 {select_even(arr)}')
 
 #task3
 
-#def wipe_even(arr, target_value, in_place):
+def wipe_even(arr, target_value, in_place):
+    
+    if in_place == True:
+        np.place(arr, arr % 2 == 0, target_value)
+        return arr
+    else:
+        return arr
 
+#1
+arr = np.array([1, 2, 3, 4, 5])
+target_value = np.array([10, 20, 30, 40, 50])
+in_place = True
 
+print(f'#3.1 {wipe_even(arr, target_value, in_place)}')
+
+#2
+arr = np.array([1, 2, 3, 4, 5])
+target_value = 0
+in_place = False
+
+print(f'#3.2 {wipe_even(arr, target_value, in_place)}')
 
 
 
